@@ -9,6 +9,7 @@ namespace PRACTICA_AEAE_3.Models
 {
     public class BDFACTURACION : DbContext
     {
+        public BDFACTURACION() : base("name=BDFACTURACION") { }
         public DbSet<TBLCLIENTES> TBLCLIENTE { get; set; }
         public DbSet<TBLPRODUCTO> TBLPRODUCTO { get; set; }
         public DbSet<TBLCATEGORIA> TBLCATEGORIA { get; set; }
