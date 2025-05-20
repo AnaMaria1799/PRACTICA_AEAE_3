@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace PRACTICA_AEAE_3.Models
 {
-    public class BDFACTURACION
+    public class BDFACTURACION : DbContext
     {
         public DbSet<TBLCLIENTES> TBLCLIENTE { get; set; }
         public DbSet<TBLPRODUCTO> TBLPRODUCTO { get; set; }
