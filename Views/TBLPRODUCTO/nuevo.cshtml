@@ -1,0 +1,34 @@
+﻿@model PRACTICA_AEAE_3.TBLCLIENTE
+
+@{
+    ViewBag.Title = "Nuevo Cliente";
+    Layout = "~/Views/Shared/_LayoutFacturacion.cshtml";
+}
+
+<h2 class="well">NUEVO CLIENTE</h2>
+
+@using (Html.BeginForm("Nuevo", "TBLCliente", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.strNombre)
+        @Html.TextBoxFor(model => model.strNombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.strNombre)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumDocumento)
+        @Html.TextBoxFor(model => model.NumDocumento, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NumDocumento)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.StrTelefono)
+        @Html.TextBoxFor(model => model.StrTelefono, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.StrTelefono)
+    </div>
+
+    <input type="submit" value="Guardar" class="btn btn-success" />
+    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-default" })
+}

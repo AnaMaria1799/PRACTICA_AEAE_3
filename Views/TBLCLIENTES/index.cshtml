@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PRACTICA_AEAE_3.TBLCLIENTES>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_LayoutFacturacion.cshtml";
+}
+
+<h2>ADMINISTRAR CLIENTES</h2>
+<div class="well">
+    @Html.ActionLink("+ Nuevo", "Nuevo", null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.strNombre</td>
+            <td>@item.NumDocumento</td>
+            <td>@item.StrTelefono</td>
+            <td>@item.StrEmail</td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.IdCliente }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Borrar", "Borrar", new { id = item.IdCliente }, new { @class = "btn btn-danger", onclick = "return confirm('¿Eliminar?')" })
+            </td>
+        </tr>
+    }
+</table>

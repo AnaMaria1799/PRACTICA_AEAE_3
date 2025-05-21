@@ -190,12 +190,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\TBLCLIENTES\index.cshtml" />
+    <Content Include="Views\TBLPRODUCTO\nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\TBLCLIENTECONTROLLER\" />
-    <Folder Include="Views\TBLCLIENTES\" />
-    <Folder Include="Views\TBLPRODUCTO\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
